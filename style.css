@@ -1,0 +1,152 @@
+/* ===========================
+   4. Universal Reset
+   =========================== */
+* {
+    box-sizing: border-box;
+}
+
+/* ===========================
+   5. Typography (global)
+   =========================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f9;
+    color: #333333;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ===========================
+   Header
+   =========================== */
+header {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* ===========================
+   Navigation
+   =========================== */
+nav {
+    padding: 15px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+nav ul li a:hover {
+    color: #2563eb;
+}
+
+/* ===========================
+   Main content area
+   =========================== */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   About section
+   =========================== */
+#about {
+    background-color: #eef2ff;
+    border-left: 6px solid #2563eb;
+    padding: 20px;
+}
+
+/* ===========================
+   7. Table styling
+   =========================== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+.data-table td {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* ===========================
+   Form styling
+   =========================== */
+.form-container {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: 2px solid #2563eb;
+    border-color: #2563eb;
+}
+
+#submit-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+    background-color: #1d4ed8;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666666;
+}
