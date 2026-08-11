@@ -1,152 +1,247 @@
 /* ===========================
-   4. Universal Reset
+   Google Font
+   =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Global Styles
    =========================== */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* ===========================
-   5. Typography (global)
-   =========================== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f9;
-    color: #333333;
-}
-
-p {
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.7;
 }
 
 /* ===========================
    Header
    =========================== */
 header {
-    background-color: #1e293b;
-    color: #ffffff;
+    background: linear-gradient(135deg, #0066ff, #00b4d8);
+    color: #fff;
     text-align: center;
-    padding: 30px 20px;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+header h1 {
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: .95;
 }
 
 /* ===========================
    Navigation
    =========================== */
 nav {
-    padding: 15px 20px;
+    background: #0d1b2a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    gap: 20px;
 }
 
 nav ul li a {
+    display: block;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    color: #1e293b;
+    padding: 18px 25px;
+    transition: .3s;
+    font-weight: 500;
 }
 
 nav ul li a:hover {
-    color: #2563eb;
+    background: #0066ff;
 }
 
 /* ===========================
-   Main content area
+   Main Content
    =========================== */
 main {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
 section {
-    padding: 20px;
-    margin-bottom: 25px;
+    background: #fff;
+    padding: 35px;
+    margin-bottom: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    transition: .3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    color: #0066ff;
+    margin-bottom: 15px;
+    border-left: 6px solid #00b4d8;
+    padding-left: 12px;
+}
+
+section p {
+    margin-bottom: 20px;
 }
 
 /* ===========================
-   About section
-   =========================== */
-#about {
-    background-color: #eef2ff;
-    border-left: 6px solid #2563eb;
-    padding: 20px;
-}
-
-/* ===========================
-   7. Table styling
+   Table Styling
    =========================== */
 .data-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.data-table th,
-.data-table td {
-    padding: 12px 15px;
+th {
+    background: #0066ff;
+    color: #fff;
+    padding: 15px;
     text-align: left;
 }
 
-.data-table th {
-    background-color: #1e293b;
-    color: #ffffff;
+td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
 }
 
-.data-table td {
-    border-bottom: 1px solid #dddddd;
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tbody tr:hover {
+    background: #eaf4ff;
 }
 
 /* ===========================
-   Form styling
+   Registration Form
    =========================== */
 .form-container {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    padding: 25px;
+    max-width: 650px;
+    margin: auto;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 22px;
 }
 
-input[type="text"],
+label {
+    font-weight: 600;
+}
+
+input,
 select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+    padding: 13px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: .3s;
+    outline: none;
 }
 
-input[type="text"]:focus,
+input:focus,
 select:focus {
-    outline: 2px solid #2563eb;
-    border-color: #2563eb;
+    border-color: #0066ff;
+    box-shadow: 0 0 8px rgba(0, 102, 255, .3);
 }
 
-#submit-btn {
-    background-color: #2563eb;
-    color: #ffffff;
-    font-weight: bold;
+button {
+    width: 100%;
+    padding: 14px;
     border: none;
-    border-radius: 4px;
-    padding: 12px 24px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0066ff, #00b4d8);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
     cursor: pointer;
+    transition: .3s;
 }
 
-#submit-btn:hover {
-    cursor: pointer;
-    background-color: #1d4ed8;
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 102, 255, .35);
 }
 
 /* ===========================
    Footer
    =========================== */
 footer {
+    background: #0d1b2a;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    color: #666666;
+    margin-top: 40px;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    /* Container Width */
+    main,
+    .form-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    /* Responsive Table */
+    .data-table {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+    }
 }
