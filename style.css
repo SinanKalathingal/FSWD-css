@@ -3,6 +3,7 @@
    =========================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
 /* ===========================
    Global Styles
    =========================== */
@@ -17,7 +18,9 @@ body {
     background: #f4f7fb;
     color: #333;
     line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
 }
+
 
 /* ===========================
    Header
@@ -40,6 +43,7 @@ header p {
     opacity: .95;
 }
 
+
 /* ===========================
    Navigation
    =========================== */
@@ -53,6 +57,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style: none;
     gap: 20px;
 }
@@ -69,6 +74,31 @@ nav ul li a {
 nav ul li a:hover {
     background: #0066ff;
 }
+
+
+/* ===========================
+   Toggle Theme Button
+   =========================== */
+#themeToggle {
+    width: auto;
+    padding: 14px 18px;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0066ff, #00b4d8);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+#themeToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 102, 255, .35);
+}
+
 
 /* ===========================
    Main Content
@@ -103,6 +133,7 @@ section p {
     margin-bottom: 20px;
 }
 
+
 /* ===========================
    Table Styling
    =========================== */
@@ -135,6 +166,7 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background: #eaf4ff;
 }
+
 
 /* ===========================
    Registration Form
@@ -172,6 +204,10 @@ select:focus {
     box-shadow: 0 0 8px rgba(0, 102, 255, .3);
 }
 
+
+/* ===========================
+   Submit Button
+   =========================== */
 button {
     width: 100%;
     padding: 14px;
@@ -190,6 +226,7 @@ button:hover {
     box-shadow: 0 8px 18px rgba(0, 102, 255, .35);
 }
 
+
 /* ===========================
    Footer
    =========================== */
@@ -201,13 +238,77 @@ footer {
     margin-top: 40px;
 }
 
+
+/* ===========================
+   DARK THEME
+   =========================== */
+
+body.dark-theme {
+    background: #222;
+    color: #fff;
+}
+
+
+/* Dark Theme - Sections */
+body.dark-theme section {
+    background: #333;
+    color: #fff;
+}
+
+
+/* Dark Theme - Section Headings */
+body.dark-theme section h2 {
+    color: #00b4d8;
+}
+
+
+/* Dark Theme - Paragraphs */
+body.dark-theme section p {
+    color: #fff;
+}
+
+
+/* Dark Theme - Table */
+body.dark-theme td {
+    color: #fff;
+    border-bottom-color: #555;
+}
+
+body.dark-theme tbody tr:nth-child(even) {
+    background: #444;
+}
+
+body.dark-theme tbody tr:hover {
+    background: #555;
+}
+
+
+/* Dark Theme - Form */
+body.dark-theme label {
+    color: #fff;
+}
+
+body.dark-theme input,
+body.dark-theme select {
+    background: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+body.dark-theme input::placeholder {
+    color: #ccc;
+}
+
+
 /* ===========================
    Responsive Design
    =========================== */
 @media (max-width: 768px) {
+
     header h1 {
         font-size: 2rem;
     }
+
 
     /* Navigation */
     nav ul {
@@ -225,6 +326,18 @@ footer {
         border-top: 1px solid rgba(255, 255, 255, .15);
     }
 
+
+    /* Toggle Theme Button */
+    nav ul li:has(#themeToggle) {
+        width: auto;
+    }
+
+    #themeToggle {
+        width: auto;
+        margin: 10px auto;
+    }
+
+
     /* Container Width */
     main,
     .form-container {
@@ -235,6 +348,7 @@ footer {
     section {
         padding: 25px;
     }
+
 
     /* Responsive Table */
     .data-table {
